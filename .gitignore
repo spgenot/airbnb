@@ -5,6 +5,12 @@ __pycache__/
 # C extensions
 *.so
 
+/sample_submission.csv
+/sessions.csv
+/test_users.csv
+/age_gender_bkts.csv
+/countries.csv
+/train_users.csv
 # Distribution / packaging
 .Python
 env/

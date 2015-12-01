@@ -23,10 +23,10 @@ class DataInserter:
 
     def __init__(self):
         self.load_train()
-        self.load_test()
-        self.load_countries()
-        self.load_age_gender_bkts()
-        self.load_sessions()
+        #self.load_test()
+        #self.load_countries()
+        #self.load_age_gender_bkts()
+        #self.load_sessions()
 
 
     def load_train(self):
@@ -34,9 +34,9 @@ class DataInserter:
         print train_df.head()
         for index, rows in train_df.iterrows():
             doc = {'id': rows['id'],
-                   'data_account_created': rows['date_account_created'],
+                   'date_account_created': rows['date_account_created'],
                    'timestamp_first_active': rows['timestamp_first_active'],
-                   'data_first_booking': rows['date_first_booking'],
+                   'date_first_booking': rows['date_first_booking'],
                    'gender': rows['gender'],
                    'age': rows['age'],
                    'signup_method': rows['signup_method'],
@@ -58,9 +58,9 @@ class DataInserter:
         print test_df.head()
         for index, rows in test_df.iterrows():
             doc = {'id': rows['id'],
-                   'data_account_created': rows['date_account_created'],
+                   'date_account_created': rows['date_account_created'],
                    'timestamp_first_active': rows['timestamp_first_active'],
-                   'data_first_booking': rows['date_first_booking'],
+                   'date_first_booking': rows['date_first_booking'],
                    'gender': rows['gender'],
                    'age': rows['age'],
                    'signup_method': rows['signup_method'],

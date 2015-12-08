@@ -40,9 +40,8 @@ for key in train_users_keys:
     plt.title('Aggregation of ' + key)
     plt.xticks(xticks, count_dict.keys(), rotation='vertical')
     plt.show()
-"""
 
-"""
+
 #Now we try to find the cross references (for each country how much of what)
 countries = ['US', 'FR', 'CA', 'GB', 'ES', 'IT', 'PT', 'NL','DE', 'AU', 'NDF', 'other']
 train_users_keys.remove('country_destination')
@@ -63,14 +62,14 @@ for k in train_users_keys:
         plt.title('Aggregation of ' + k + ' for country ' + c)
         plt.xticks(xticks, count_dict.keys(), rotation='vertical')
         plt.show()
-"""
+
 
 #Other questions to answer: dealing with dates
 #I think I can make the same kind of plots, but:
 #   - deal with the xticks: display only the month name
 #   - Try to aggregate this in terms of weekdays as well
 
-"""
+
 for key in train_users_date_keys:
     count_dict = defaultdict(int)
     pipeline = [{'$group':
@@ -97,13 +96,11 @@ for key in train_users_date_keys:
     plt.ylim(0, 1000)
     plt.title('Aggregation of ' + key)
     plt.show()
-"""
 
 #Here can we aggregate on certain elements of the dates?
 #Directly on the date, on the month, day, etc...
-
-
 """
+
 #country_destination by day of the week:
 countries = ['US', 'FR', 'CA', 'GB', 'ES', 'IT', 'PT', 'NL','DE', 'AU', 'NDF', 'other']
 train_users_keys.remove('country_destination')
@@ -133,7 +130,7 @@ for k in train_users_date_keys:
 """
 #Country destination by the month of the year
 countries = ['US', 'FR', 'CA', 'GB', 'ES', 'IT', 'PT', 'NL','DE', 'AU', 'NDF', 'other']
-train_users_keys.remove('country_destination')
+#train_users_keys.remove('country_destination')
 for k in train_users_date_keys:
     for c in countries:
         count_dict = defaultdict(int)
@@ -194,7 +191,6 @@ plt.xlabel('Country')
 plt.ylabel('Average number of sessions')
 plt.xticks(range(0, len(countries)), average_number_of_sessions_by_country.keys(), rotation='vertical')
 plt.show()
-"""
 
 
 ##We now dwelve deeper into the sessions data.

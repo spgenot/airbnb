@@ -23,10 +23,10 @@ class DataInserter:
 
     def __init__(self):
         self.load_train()
-        #self.load_test()
-        #self.load_countries()
-        #self.load_age_gender_bkts()
-        #self.load_sessions()
+        self.load_test()
+        self.load_countries()
+        self.load_age_gender_bkts()
+        self.load_sessions()
 
 
     def load_train(self):
